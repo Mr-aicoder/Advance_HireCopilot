@@ -1,0 +1,16 @@
+# Virtual Environment (Stored on E: drive)
+.venv/
+venv/
+
+# Environment Secrets & API Keys
+.env
+*.pem
+*.key
+
+# Python Artifacts & Local DBs
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+.vscode/
+.idea/
