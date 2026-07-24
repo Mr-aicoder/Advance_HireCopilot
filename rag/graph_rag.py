@@ -19,7 +19,7 @@ class GraphRAGEngine:
         MERGE (s:Skill {name: toLower(trim(skill_name))})
         MERGE (c)-[:HAS_SKILL]->(s)
         """
-        # Let Neo4j automatically route to the default home database
+        # Remove database="neo4j" so Aura uses its home database routing automatically
         async with self.driver.session() as session:
             await session.run(
                 query,
